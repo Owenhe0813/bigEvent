@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- layui组件 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- jquery -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 自己的css样式 -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <!-- 自己的js -->
+    <title>login</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- logo区 -->
+        <div class="top">
+            <img src="/assets/images/logo.png" alt="" srcset="">
+        </div>
+        <!-- 登录框区 -->
+        <div class="login">
+            <div class="login_title">
+                <img src="/assets/images/login_title.png" alt="title">
+            </div>
+            <form class="layui-form log" action="#">
+                <div class="layui-form-item ">
+                    <div class="layui-input-block line">
+                        <i class="layui-icon layui-icon-username icon"></i>
+                        <input type="text" name="username" required lay-verify="required" placeholder="用户名" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-block line">
+                        <i class="layui-icon layui-icon-password icon"></i>
+                        <input type="text" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-block line">
+                        <button type="button" class="layui-btn layui-btn-fluid">登录</button>
+                    </div>
+                    <div class="line toggleToReg">
+                        <a href="javacript:void(0)">还没有账号，去验证</a>
+                    </div>
+                </div>
+            </form>
+            <form class="layui-form reg" action="#">
+                <div class="layui-form-item ">
+                    <div class="layui-input-block line">
+                        <i class="layui-icon layui-icon-username icon"></i>
+                        <input type="text" name="username" required lay-verify="required" placeholder="用户名" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-block line">
+                        <i class="layui-icon layui-icon-password icon"></i>
+                        <input type="text" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-block line">
+                        <i class="layui-icon layui-icon-password icon"></i>
+                        <input type="text" name="" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-block line">
+                        <button type="button" class="layui-btn layui-btn-fluid">注册</button>
+                    </div>
+
+                    <div class="line toggleTologin">
+                        <a href="javacript:void(0)">已有账号，直接登录</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>
