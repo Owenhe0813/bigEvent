@@ -26,4 +26,25 @@ $(function() {
         })
         //3.注册
         //4.登录
+    $('.log').on('submit', function(e) {
+        // 4.1 点击按钮登录，
+        e.preventDefault();
+        //     提交表单数据：
+        const data = $(this).serialize();
+        $.ajax({
+            type: 'POST',
+            url: 'http://www.liulongbin.top:3007/api/login',
+            data: data,
+            success: function(res) {
+                // 4.2 1.弹出响应 -
+                layer.msg(res.message);
+                // 4.3 2.如果验证成功，储存token,转跳index
+                if (res.stauts === 0) {
+                    localStorage.setItem('token', res.token);
+                    location.href = '/index.html';
+                }
+            }
+        })
+    })
+
 });
