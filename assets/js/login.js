@@ -39,7 +39,7 @@ $(function() {
                 // 4.2 1.弹出响应 -
                 layer.msg(res.message);
                 // 4.3 2.如果验证成功，储存token,转跳index
-                if (res.stauts === 0) {
+                if (res.status === 0) {
                     localStorage.setItem('token', res.token);
                     location.href = '/index.html';
                 }
